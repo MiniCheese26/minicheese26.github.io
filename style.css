@@ -1,0 +1,40 @@
+body {
+  background-color: #2b3a48;
+  color: white;
+}
+
+h1 {
+  font-family: gotham-rounded-light, sans-serif;
+  font-size: 25pt;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 15pt;
+  font-family: gotham-rounded-light, sans-serif;
+  font-weight: normal;
+}
+
+p {
+  font-family: Lato;
+}
+
+.hrefCenter {
+  text-align: center;
+}
+
+.inline {
+  display: inline;
+}
+
+.divBoxesClass {
+  font-family: Helvetica, sans-serif;
+}
+
+.projectHeadings {
+  font-family: Lato;
+  font-size: 27px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
