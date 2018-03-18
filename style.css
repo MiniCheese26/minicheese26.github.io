@@ -5,12 +5,12 @@ body {
   height: 100%;
   margin: 0 auto;
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
 }
 
 h1 {
