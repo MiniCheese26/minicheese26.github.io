@@ -10,30 +10,20 @@ body {
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  font-family: Lato, Helvetica, sans-serif;
 }
 
 h1 {
-  font-family: Lato, Helvetica, sans-serif;
   font-size: 25pt;
   font-weight: normal;
 }
 
 h3 {
   font-size: 15pt;
-  font-family: Lato, Helvetica, sans-serif;
   font-weight: normal;
 }
 
-p {
-  font-family: Lato, Helvetica, sans-serif;
-}
-
-.hrefCenter {
-  text-align: center;
-}
-
 .projectHeadings {
-  font-family: Lato, Helvetica, sans-serif;
   font-size: 27px;
   font-weight: normal;
   color: #1968e8;
@@ -60,7 +50,6 @@ p {
 
 .header-text {
   margin-top: 10px;
-  font-family: Leto, Helvetica, sans-serif;
   font-size: 25pt;
   font-weight: normal;
   text-align: center;
@@ -68,7 +57,6 @@ p {
 
 .header-subtitle {
   font-size: 14pt;
-  font-family: Leto, Helvetica, sans-serif;
   font-weight: normal;
   margin-top: -10px;
 }
