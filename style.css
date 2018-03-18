@@ -7,6 +7,11 @@ body {
   text-align: center;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 h1 {
   font-family: Lato, Helvetica, sans-serif;
   font-size: 25pt;
