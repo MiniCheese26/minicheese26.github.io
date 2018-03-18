@@ -154,14 +154,6 @@ p {
     }
 }
 
-.bottom-card-left {
+.bottom-card-align {
   text-align: left;
-}
-
-.bottom-card-center {
-  text-align: center;
-}
-
-.bottom-card-right {
-  text-align: right;
 }
