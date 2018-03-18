@@ -5,7 +5,7 @@
   <meta name="theme-color" content="#2b3a48">
   <meta name="msapplication-navbutton-color" content="#2b3a48">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -72,47 +72,48 @@
     </p>
   </div>
 
-  <div class="container" style="text-align: center; width: auto; color: white; height: auto">
-    <div id="accordion">
-      <div class="card">
-        <div class="card-header bg-primary" id="headingOne">
-          <h5>
-            <button class="btn btn-link text-white" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              About Me
-            </button>
-          </h5>
-        </div>
-
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-          <div class="card-body bg-primary">
-            Just some 15 year old guy who took a real interest in computers in the past 2 years
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header bg-success" id="headingTwo">
-            <h5>
-              <button class="btn btn-link text-white" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Lanuages I 'Know'
-              </button>
-            </h5>
-          </div>
-
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body bg-success">
-              <h5 class="card-text">C#
-                <span class="badge badge-pill badge-primary">Most Confident</span>
-                <h5 class="card-text">Visual Basic
-                  <span class="badge badge-pill badge-primary">Less Confident</span>
-                  <h5>Python <span class="badge badge-pill badge-primary">A Little</span>
-                  </h5>
-                </h5>
-              </h5>
+  <div class="row d-flex justify-content-around">
+    <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-4">
+      <div class="card text-primary border-primary" style="height: 206px">
+        <div class="card-block">
+          <div class="card-body">
+            <div class="bottom-card-padding">
+              <h2 class="card-title">About Me</h3>
+                <p class="card-text">Just some 15 year old guy who took a real interest in computers in the past 2 years. Had an interest my whole life and i hope to turn it into something succesful</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </body>
-  </html>
+      <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-4">
+        <div class="card text-success border-success">
+          <div class="card-block">
+            <div class="card-body">
+              <div class="bottom-card-padding">
+                <h2 class="card-title">Languages I "Know"</h3>
+                  <p class="card-text">C# <span class="badge badge-pill badge-primary">Most Confident</p>
+                    <p class="card-text">Visual Basic <span class="badge badge-pill badge-primary">Less Confident</p>
+                      <p class="card-text">Python <span class="badge badge-pill badge-primary">A Little</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-4">
+                <div class="card text-dark border-dark" style="height: 206px">
+                  <div class="card-block">
+                    <div class="card-body">
+                      <div class="bottom-card-padding">
+                        <h2 class="card-title">What Should I Put Here?</h3>
+                          <p class="card-text">No idea, I just wanted it to look this way :)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </body>
+            </html>
