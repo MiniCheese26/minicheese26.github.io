@@ -42,7 +42,7 @@
         <h1 class="display-4">My Projects</h1>
         <p class="lead">My work that i've created over the years. Depending on when you're reading this, there could be simple little tools ahead or things grander!</p>
         <p class="lead">
-          <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+          <ul class="nav nav-tabs justify-content-center flex-column flex-sm-row" id="myTab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="IGGLinkScraper-tab" data-toggle="tab" href="#h" role="tab" aria-controls="IGGLinkScraper" aria-selected="true">IGG-LinkScraper
                 <span class="badge badge-pill badge-success">Released</span>
@@ -54,7 +54,7 @@
                   <span class="badge badge-pill badge-success">C#/VB.Net</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="NEA-tab" data-toggle="tab" href="#r" role="tab" aria-controls="NEA" aria-selected="false">Batch Renamer
+                  <a class="nav-link" id="Batch-tab" data-toggle="tab" href="#r" role="tab" aria-controls="Batch" aria-selected="false">Batch Renamer
                     <span class="badge badge-pill badge-primary">In Development</span>
                     <span class="badge badge-pill badge-primary">C#</span></a>
                   </li>
@@ -69,7 +69,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="p" role="tabpanel" aria-labelledby="NEA-tab">
+                  <div class="tab-pane fade" id="p" role="tabpanel" aria-labelledby="NEA-tab" >
                     <div class="box">
                       <a href="https://github.com/MiniCheese26/NEA-GCSE-CSharp-Code-CLI" style="text-decoration: none; color: #1968e8; font-weight: normal; font-size: 27px">2018/2017 GCSE NEA</a>
                       <div class="noselect" style="color: black">
@@ -79,61 +79,88 @@
                       <a href="https://github.com/MiniCheese26/NEA-GCSE-VB-Code-CLI" style="text-decoration: none; color: #1968e8; font-weight: normal">[VB.net version (Not as efficient IMO)]</a>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="r" role="tabpanel" aria-labelledby="NEA-tab">
-                    <div class="box">
-                      <p style="text-decoration: none; color: #1968e8; font-weight: normal; font-size: 27px">Batch Renamer</a>
-                        <div class="noselect" style="color: black">
-                          <p style="font-size: 18px; margin-top: 5px">A tool with many different features to batch rename files</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </p>
-              </div>
-            </div>
 
-            <div class="row d-flex justify-content-around">
-              <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-4">
-                <div class="card text-primary border-primary h-100">
-                  <div class="card-block">
-                    <div class="card-body">
-                      <div class="bottom-card-align">
-                        <h2 class="card-title">About Me</h3>
-                          <p class="card-text">Just some 15 year old guy who took a real interest in computers in the past 2 years. Had an interest my whole life and i hope to turn it into something succesful.</p>
+                    <div class="tab-pane fade" id="r" role="tabpanel" aria-labelledby="Batch-tab">
+                      <div class="box">
+                        <p style="text-decoration: none; color: #1968e8; font-weight: normal; font-size: 27px">Batch Renamer</a>
+                          <div class="noselect" style="color: black">
+                            <p style="font-size: 18px; margin-top: 5px">A tool with many different features to batch rename files</p>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                        <div class="container-fluid">
+                        <div class="accordion">
+                          <div class="card mx-auto mt-4 text-white bg-primary" style="width: 300px; down: 50px">
+                            <div class="card-header" id="progress">
+                              <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#Desc" aria-expanded="true" aria-controls="Desc" style="text-decoration: none; color: white">
+                                  Progress - Current Version v0.1
+                                </button>
+                              </h5>
+                            </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-4">
-                  <div class="card text-success border-success h-100">
-                    <div class="card-block">
-                      <div class="card-body">
-                        <div class="bottom-card-align">
-                          <h2 class="card-title">Languages I "Know"</h3>
-                            <p class="card-text">C# <span class="badge badge-pill badge-success">Most Confident</p>
-                              <p class="card-text">Visual Basic <span class="badge badge-pill badge-success">Less Confident</p>
-                                <p class="card-text">Python <span class="badge badge-pill badge-success">A Little</p>
-                                </div>
+                            <div id="Desc" class="collapse" aria-labelledby="progress" data-parent="#accordion">
+                              <div class="card-body">
+                                <h2 style="font-size: 25px">Summary</h2>
+                                <h2 style="font-size: 25px">-----------------------------</h2>
+                                <P>Initial development started. Basic rename all files in folder X with Z working.</p>
+                                <h2 style="font-size: 25px">Specific Progress</h2>
+                                <h2 style="font-size: 25px">-----------------------------</h2>
+                                <p>Rename each file with number X as each file is renamed. I.E. 1st replace - text.txt -> 2nd replace test1.txt etc.</p>
                               </div>
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
 
-                        <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-4">
-                          <div class="card text-dark border-dark h-100">
-                            <div class="card-block">
-                              <div class="card-body">
-                                <div class="bottom-card-align">
-                                  <h2 class="card-title">What Should I Put Here?</h3>
-                                    <p class="card-text">No idea, I just wanted it to look this way :)</p>
+              <div class="container-fluid">
+                <div class="row d-flex justify-content-around">
+                  <div class="col-sm-1 col-md-4 col-lg-3 pb-3 px-4">
+                    <div class="card text-primary border-primary h-100">
+                      <div class="card-block">
+                        <div class="card-body">
+                          <div class="bottom-card-align">
+                            <h2 class="card-title">About Me</h3>
+                              <p class="card-text">Just some 15 year old guy who took a real interest in computers in the past 2 years. Had an interest my whole life and i hope to turn it into something succesful.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-1 col-md-4 col-lg-3 pb-3 px-4">
+                      <div class="card text-success border-success h-100">
+                        <div class="card-block">
+                          <div class="card-body">
+                            <div class="bottom-card-align">
+                              <h2 class="card-title">Languages I "Know"</h3>
+                                <p class="card-text">C# <span class="badge badge-pill badge-success">Most Confident</p>
+                                  <p class="card-text">Visual Basic <span class="badge badge-pill badge-success">Less Confident</p>
+                                    <p class="card-text">Python <span class="badge badge-pill badge-success">A Little</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-sm-1 col-md-4 col-lg-3 pb-3 px-4">
+                              <div class="card text-dark border-dark h-100">
+                                <div class="card-block">
+                                  <div class="card-body">
+                                    <div class="bottom-card-align">
+                                      <h2 class="card-title">What Should I Put Here?</h3>
+                                        <p class="card-text">No idea, I just wanted it to look this way :)</p>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                      </body>
-                      </html>
+                        </body>
+                        </html>
