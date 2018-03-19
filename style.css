@@ -160,3 +160,7 @@ h3 {
 .jumbotron-font {
   font-family: 'Lato', sans-serif;
 }
+
+.modal-width {
+  max-width: 900px;
+}
