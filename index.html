@@ -40,20 +40,20 @@
 
     <div class="jumbotron-font">
       <div class="jumbotron">
-          <h1 class="display-4">My Projects</h1>
-          <p class="lead">My work that i've created over the years. Depending on when you're reading this, there could be simple little tools ahead or things grander!</p>
-          <p class="lead">
-            <ul class="nav nav-tabs justify-content-center flex-column flex-sm-row" id="myTab" role="tablist">
+        <h1 class="display-4">My Projects</h1>
+        <p class="lead">My work that i've created over the years. Depending on when you're reading this, there could be simple little tools ahead or things grander!</p>
+        <p class="lead">
+          <ul class="nav nav-tabs justify-content-center flex-column flex-sm-row" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="IGGLinkScraper-tab" data-toggle="tab" href="#h" role="tab" aria-controls="IGGLinkScraper" aria-selected="true">IGG-LinkScraper
+                <span class="badge badge-pill badge-success">Released</span>
+                <span class="badge badge-pill badge-success">C#</span></a>
+              </li>
               <li class="nav-item">
-                <a class="nav-link active" id="IGGLinkScraper-tab" data-toggle="tab" href="#h" role="tab" aria-controls="IGGLinkScraper" aria-selected="true">IGG-LinkScraper
+                <a class="nav-link" id="RaveDJ-tab" data-toggle="tab" href="#i" role="tab" aria-controls="RaveDJ" aria-selected="true">RaveDJ-Downloader
                   <span class="badge badge-pill badge-success">Released</span>
                   <span class="badge badge-pill badge-success">C#</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="RaveDJ-tab" data-toggle="tab" href="#i" role="tab" aria-controls="RaveDJ" aria-selected="true">RaveDJ-Downloader
-                    <span class="badge badge-pill badge-success">Released</span>
-                    <span class="badge badge-pill badge-success">C#</span></a>
-                  </li>
                 <li class="nav-item">
                   <a class="nav-link" id="NEA-tab" data-toggle="tab" href="#p" role="tab" aria-controls="NEA" aria-selected="false">2018/2017 GCSE NEA Code
                     <span class="badge badge-pill badge-success">Released</span>
@@ -106,11 +106,12 @@
 
                         <div class="container-fluid">
                           <div class="accordion">
-                            <div class="card mx-auto mt-4 text-white bg-primary btn-hover-color" style="width: 300px; down: 50px">
+                            <div class="card mx-auto mt-4 text-white bg-primary btn-hover-color" style="max-width: 300px; down: 50px">
                               <div class="card-header" id="progress">
-                                <h5 class="mb-0">
-                                  <button class="btn btn-link" data-toggle="collapse" data-target="#Desc" aria-expanded="true" aria-controls="Desc" style="text-decoration: none; color: white">
-                                    Progress - Current Version v0.1
+                                <h5>
+                                  <button class="btn btn-link text-center" data-toggle="collapse" data-target="#Desc" aria-expanded="true" aria-controls="Desc" style="text-decoration: none; color: white">
+                                    Current Version v0.0.2
+                                    <h5 class="mt-2">Click For More</h5>
                                   </button>
                                 </h5>
                               </div>
@@ -119,10 +120,7 @@
                                 <div class="card-body">
                                   <h2 style="font-size: 25px">Summary</h2>
                                   <h2 style="font-size: 25px">-----------------------------</h2>
-                                  <P>Initial development started. Basic rename all files in folder X with Z working.</p>
-                                    <h2 style="font-size: 25px">Specific Progress</h2>
-                                    <h2 style="font-size: 25px">-----------------------------</h2>
-                                    <p>Rename each file with number X as each file is renamed. I.E. 1st replace - text.txt -> 2nd replace test1.txt etc.</p>
+                                  <P>Added function to remove a set word from file names.</p>
 
                                     <div class="container-fluid">
                                       <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModa">
@@ -149,7 +147,7 @@
                                                 </div>
                                                 <div class="tab-content bottom-card-align ml-3" id="myTabContent">
                                                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                                    <div class="code">
+                                                    <div>
                                                       <span class="Namespace">using</span>&nbsp;System;<br />
                                                       <span class="Namespace">using</span>&nbsp;System.Collections.Generic;<br />
                                                       <span class="Namespace">using</span>&nbsp;System.Linq;<br />
@@ -164,13 +162,16 @@
                                                         &nbsp;&nbsp;&nbsp;&nbsp;{<br />
                                                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">public</span>&nbsp;<span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main()<br />
                                                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>[]&nbsp;programOptions&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;<span class="ReferenceType">string</span>[1]&nbsp;{&nbsp;<span class="String">"Batch&nbsp;Rename"</span>&nbsp;};<br />
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>[]&nbsp;programOptions&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;<span class="ReferenceType">string</span>[3]&nbsp;{&nbsp;<span class="String">"Batch&nbsp;Rename"</span>,&nbsp;<span class="String">"Remove&nbsp;Text"</span>,&nbsp;<span class="String">"Remove&nbsp;Characters"</span>&nbsp;};<br />
                                                             <br />
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Menu&nbsp;Selection"</span>);<br />
                                                             <br />
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;1;<br />
+                                                            <br />
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">foreach</span>&nbsp;(<span class="ReferenceType">string</span>&nbsp;s&nbsp;<span class="Statement">in</span>&nbsp;programOptions)<br />
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"1.&nbsp;{0}"</span>,&nbsp;s);<br />
+                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"{0}.&nbsp;{1}"</span>,&nbsp;i,&nbsp;s);<br />
+                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br />
                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
                                                               <br />
                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;optionChoiceCheck&nbsp;=&nbsp;Console.ReadLine();<br />
@@ -192,6 +193,14 @@
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Clear();<br />
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operations.BatchRename();<br />
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">break</span>;<br />
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;<span class="String">"Remove&nbsp;Text"</span>:<br />
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Clear();<br />
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operations.RemoveText();<br />
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">break</span>;<br />
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;<span class="String">"Remove&nbsp;Characters"</span>:<br />
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Clear();<br />
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operations.RemoveCharacters();<br />
+                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">break</span>;<br />
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
                                                                   &nbsp;&nbsp;&nbsp;&nbsp;}<br />
@@ -199,7 +208,7 @@
                                                               </div>
                                                             </div>
                                                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                                              <div class="code">
+                                                              <div>
                                                                 <span class="Namespace">using</span>&nbsp;System;<br />
                                                                 <span class="Namespace">using</span>&nbsp;System.Collections.Generic;<br />
                                                                 <span class="Namespace">using</span>&nbsp;System.Linq;<br />
@@ -221,8 +230,7 @@
                                                                       <br />
                                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">while</span>&nbsp;(!Directory.Exists(dir))<br />
                                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">""</span>);<br />
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Directory&nbsp;does&nbsp;not&nbsp;exist.&nbsp;Try&nbsp;again"</span>);<br />
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"\nDirectory&nbsp;does&nbsp;not&nbsp;exist.&nbsp;Try&nbsp;again"</span>);<br />
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dir&nbsp;=&nbsp;Console.ReadLine();<br />
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
                                                                         <br />
@@ -250,97 +258,149 @@
                                                                               <br />
                                                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;renameFinal&nbsp;=&nbsp;rename&nbsp;+&nbsp;"</span>.<span class="String">"&nbsp;+&nbsp;extension;<br />
                                                                                 <br />
+                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(renameFinal);<br />
+                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(file);<br />
+                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadKey();<br />
+                                                                                <br />
                                                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File.Move(file,&nbsp;renameFinal);<br />
                                                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br />
                                                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
                                                                                 <br />
-                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("");<br />
-                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("</span>Done");<br />
-                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadKey();<br />
-                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Clear();<br />
-                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Program.Main();<br />
-                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
-                                                                                &nbsp;&nbsp;&nbsp;&nbsp;}<br />
-                                                                              }
+                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("</span>\nDone<span class="String">");<br />
+                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadKey();<br />
+                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Clear();<br />
+                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Program.Main();<br />
+                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                                                                  <br />
+                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;void&nbsp;RemoveText()<br />
+                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("</span>Remove&nbsp;Text<span class="String">");<br />
+                                                                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("</span>----------------------<span class="String">");<br />
+                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("</span>Enter&nbsp;your&nbsp;directory<span class="String">");<br />
+                                                                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;dir&nbsp;=&nbsp;Console.ReadLine();<br />
+                                                                                          <br />
+                                                                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(!Directory.Exists(dir))<br />
+                                                                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("</span>\nDirectory&nbsp;does&nbsp;not&nbsp;exist.&nbsp;Try&nbsp;again<span class="String">");<br />
+                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dir&nbsp;=&nbsp;Console.ReadLine();<br />
+                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                                                                              <br />
+                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("</span>What&nbsp;would&nbsp;you&nbsp;like&nbsp;to&nbsp;remove&nbsp;<span class="Linq">from</span>&nbsp;these&nbsp;file&nbsp;names?&nbsp;You&nbsp;DO&nbsp;NOT&nbsp;need&nbsp;to&nbsp;add&nbsp;an&nbsp;extra&nbsp;space&nbsp;at&nbsp;the&nbsp;end&nbsp;<span class="Statement">if</span>&nbsp;it's&nbsp;there&nbsp;<span class="Statement">in</span>&nbsp;the&nbsp;filename.<span class="String">");<br />
+                                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;remove&nbsp;=&nbsp;Console.ReadLine();<br />
+                                                                                                <br />
+                                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string[]&nbsp;files&nbsp;=&nbsp;Directory.GetFiles(dir);<br />
+                                                                                                <br />
+                                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(string&nbsp;file&nbsp;in&nbsp;files)<br />
+                                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;fileName&nbsp;=&nbsp;Path.GetFileName(file);<br />
+                                                                                                  <br />
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;removeString;<br />
+                                                                                                  <br />
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(fileName.ToLower().Contains(remove))<br />
+                                                                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                                                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeString&nbsp;=&nbsp;Regex.Replace(fileName.ToLower(),&nbsp;remove&nbsp;+&nbsp;"</span>&nbsp;<span class="String">",&nbsp;"");<br />
+                                                                                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(removeString.Contains("</span>&nbsp;&nbsp;<span class="String">"))<br />
+                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                                                                                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeString&nbsp;=&nbsp;Regex.Replace(removeString,&nbsp;"</span>&nbsp;&nbsp;<span class="String">",&nbsp;"</span>&nbsp;<span class="String">");<br />
+                                                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                                                                                            <br />
+                                                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeString&nbsp;=&nbsp;dir&nbsp;+&nbsp;@"</span>\<span class="String">"&nbsp;+&nbsp;removeString;<br />
+                                                                                                              <br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File.Move(file,&nbsp;removeString);<br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                                                                                              <br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("</span>\nDone");<br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadKey();<br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Clear();<br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Program.Main();<br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                                                                                              <br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">public</span>&nbsp;<span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;RemoveCharacters()<br />
+                                                                                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                                                                                                                <br />
+                                                                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                                                                                                &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                                                                                              }
+                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                        </div>
+                                                                                                      </div>
+                                                                                                    </div>
+                                                                                                    <div class="mb-3 mr-3">
+                                                                                                      <button type="button" class="btn btn-danger float-right" data-dismiss="modal">Close</button>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </p>
+                                                                              </div>
                                                                             </div>
                                                                           </div>
                                                                         </div>
-                                                                      </div>
-                                                                    </div>
-                                                                    <div class="mb-3 mr-3">
-                                                                      <button type="button" class="btn btn-danger float-right" data-dismiss="modal">Close</button>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
 
-                                        <div class="container-fluid">
-                                          <div class="row d-flex justify-content-around inline-block">
-                                            <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-auto">
-                                              <div class="card text-primary border-primary h-100" style="position: relative">
-                                                <div id="particles-js"></div>
+                                                                        <div class="container-fluid">
+                                                                          <div class="row d-flex justify-content-around inline-block">
+                                                                            <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-auto">
+                                                                              <div class="card text-primary border-primary h-100" style="position: relative">
+                                                                                <div id="particles-js"></div>
 
-                                                <script src="particles.min.js"></script>
-                                                <script src="app.js"></script>
-                                                <div class="card-block z-index-one">
-                                                  <div class="card-body">
-                                                    <div class="bottom-card-align">
-                                                      <h2 class="card-title">About Me</h3>
-                                                        <p class="card-text">Just some 15 year old guy who took a real interest in computers in the past 2 years. Had an interest my whole life and i hope to turn it into something succesful.</p>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
+                                                                                <script src="particles.min.js"></script>
+                                                                                <script src="app.js"></script>
+                                                                                <div class="card-block z-index-one">
+                                                                                  <div class="card-body">
+                                                                                    <div class="bottom-card-align">
+                                                                                      <h2 class="card-title">About Me</h3>
+                                                                                        <p class="card-text">Just some 15 year old guy who took a real interest in computers in the past 2 years. Had an interest my whole life and i hope to turn it into something succesful.</p>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
 
-                                              <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-auto">
-                                                <div class="card text-success border-success h-100" style="position: relative">
-                                                  <div id="particles-js2"></div>
+                                                                              <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-auto">
+                                                                                <div class="card text-success border-success h-100" style="position: relative">
+                                                                                  <div id="particles-js2"></div>
 
-                                                  <script src="particles.min.js"></script>
-                                                  <script src="app.js"></script>
-                                                  <div class="card-block z-index-one">
-                                                    <div class="card-body">
-                                                      <div class="bottom-card-align">
-                                                        <h2 class="card-title">Languages I "Know"</h3>
-                                                          <p class="card-text">C# <span class="badge badge-pill badge-success">Most Confident</p>
-                                                            <p class="card-text">Visual Basic <span class="badge badge-pill badge-success">Less Confident</p>
-                                                              <p class="card-text">Python <span class="badge badge-pill badge-success">A Little</p>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
+                                                                                  <script src="particles.min.js"></script>
+                                                                                  <script src="app.js"></script>
+                                                                                  <div class="card-block z-index-one">
+                                                                                    <div class="card-body">
+                                                                                      <div class="bottom-card-align">
+                                                                                        <h2 class="card-title">Languages I "Know"</h3>
+                                                                                          <p class="card-text">C# <span class="badge badge-pill badge-success">Most Confident</p>
+                                                                                            <p class="card-text">Visual Basic <span class="badge badge-pill badge-success">Less Confident</p>
+                                                                                              <p class="card-text">Python <span class="badge badge-pill badge-success">A Little</p>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
 
-                                                      <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-auto">
-                                                        <div class="card text-danger border-danger h-100" style="position: relative">
-                                                          <div id="particles-js3"></div>
+                                                                                      <div class="col-sm-6 col-md-4 col-lg-3 pb-3 px-auto">
+                                                                                        <div class="card text-danger border-danger h-100" style="position: relative">
+                                                                                          <div id="particles-js3"></div>
 
-                                                          <script src="particles.min.js"></script>
-                                                          <div class="card-block z-index-one">
-                                                            <div class="card-body">
-                                                              <div class="bottom-card-align">
-                                                                <h2 class="card-title">Languages I Want To Learn</h3>
-                                                                  <p class="card-text" style="text-align: center">C++ | SQL | Assembly <span class="badge badge-pill badge-danger">For Reverse Engineering/Debugging</span</p>
-                                                                  <p class="card-text" style="text-align: center">General Web Design <span class="badge badge-pill badge-danger">Javascript/PHP/jQuery etc</span></p>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
+                                                                                          <script src="particles.min.js"></script>
+                                                                                          <div class="card-block z-index-one">
+                                                                                            <div class="card-body">
+                                                                                              <div class="bottom-card-align">
+                                                                                                <h2 class="card-title">Languages I Want To Learn</h3>
+                                                                                                  <p class="card-text" style="text-align: center">C++ | SQL | Assembly <span class="badge badge-pill badge-danger">For Reverse Engineering/Debugging</span</p>
+                                                                                                    <p class="card-text" style="text-align: center">General Web Design <span class="badge badge-pill badge-danger">Javascript/PHP/jQuery etc</span></p>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
 
-                                                  </body>
-                                                  </html>
+                                                                                    </body>
+                                                                                    </html>
